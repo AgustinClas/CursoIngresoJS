@@ -2,13 +2,13 @@
 	Debemos lograr tomar un dato por 'PROMPT' 
 	y lo muestro por 'getElementById' al presionar el botón 'mostrar'
 */
-
 function mostrar()
 {
-var nombre;
+	var nombre;
 
-nombre = prompt("escribe tu nombre");
+	nombre = prompt ("escriba su nombre");
 
-document.getelementbyid("elNombre").value = nombre
+	document.getElementById("elNombre").value = nombre;
+
 }
 

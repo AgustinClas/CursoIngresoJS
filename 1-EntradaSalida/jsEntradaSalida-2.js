@@ -9,6 +9,6 @@ function mostrar()
 
   edad=prompt("ingrese su edad")
 
-    alert("usted se llama"+nombre+"y tiene"+edad+"años");
+    alert("usted se llama "+nombre+" y tiene "+edad+" años ");
 }
 

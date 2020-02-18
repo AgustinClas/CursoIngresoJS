@@ -10,81 +10,50 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	var precioLampara
-    var cantidad
-    var descuento
-    var marca
-    var aumento
+ 	var precioLampara;
+    var cantidad;
+    var descuento;
+    var marca;
+    var aumento;
 
-    precioLampara = 35
-    cantidad = document.getElementById("Cantidad").value
-    marca = document.getElementById("Marca").value
+    precioLampara = 35;
+    cantidad = document.getElementById("Cantidad").value;
+    marca = document.getElementById("Marca").value;
 
-    console.log(cantidad)
-    console.log(marca)
+    console.log(cantidad);
+    console.log(marca);
 
     if(cantidad >= 6) {
-        descuento = 0.5
-
-        document.getElementById("precioDescuento").value = (precioLampara * cantidad) - (precioLampara * cantidad *descuento)
-
+        descuento = 0.5;
     } else if ( cantidad == 5 && marca == "ArgentinaLuz") {
-
-        descuento = 0.4
-
-        document.getElementById("precioDescuento").value = (precioLampara * cantidad) - (precioLampara * cantidad *descuento)
-    
+        descuento = 0.4;
     } else if (cantidad == 5 ) {
-
-        descuento = 0.3
-
-        document.getElementById("precioDescuento").value = (precioLampara * cantidad) - (precioLampara * cantidad *descuento)
-
+        descuento = 0.3;
     } else if ( cantidad == 4 && (marca == "ArgentinaLuz" || marca == "FelipeLamparas")){
-
-        descuento = 0.25
-
-        document.getElementById("precioDescuento").value = (precioLampara * cantidad) - (precioLampara * cantidad *descuento)
-
+        descuento = 0.25;
     } else if ( cantidad == 4) {
-
-        descuento = 0.2
-
-        document.getElementById("precioDescuento").value = (precioLampara * cantidad) - (precioLampara * cantidad *descuento)
+        descuento = 0.2;
     } else if ( cantidad == 3 && marca == "ArgentinaLuz"){
-
-        descuento = 0.15
-
-        document.getElementById("precioDescuento").value = (precioLampara * cantidad) - (precioLampara * cantidad *descuento)
-
+        descuento = 0.15;
     } else if (cantidad == 3 && marca == "FelipeLamparas"){
-
-        descuento = 0.1
-
-        document.getElementById("precioDescuento").value = (precioLampara * cantidad) - (precioLampara * cantidad *descuento)
-
+        descuento = 0.1;
     } else if (cantidad == 3) {
+        descuento = 0.05;    
+    }  
 
-        descuento = 0.05
+    if (cantidad == 1 || cantidad == 2){
+        document.getElementById("precioDescuento").value = precioLampara * cantidad;
+    } else {
+    document.getElementById("precioDescuento").value = (precioLampara * cantidad) - (precioLampara * cantidad *descuento);
+    }   
 
-        document.getElementById("precioDescuento").value = (precioLampara * cantidad) - (precioLampara * cantidad *descuento)
-
-    } else if (cantidad == 1 || cantidad == 2){
-
-        document.getElementById("precioDescuento").value = precioLampara * cantidad
-
+    if ( (precioLampara * cantidad) > 120){
+    aumento = (precioLampara * cantidad * descuento) * 0.1;
+    alert("IIBB usted pagó " + aumento); 
     }
 
-      if ( (precioLampara * cantidad) > 120){
-
-      aumento = precioLampara * cantidad * 0.1
-
-      alert("IIBB usted pagó " + aumento) 
-    }
-
-    console.log(descuento)
+    console.log(descuento);
 
 }
 
-// Chequear y arreglaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaar
   

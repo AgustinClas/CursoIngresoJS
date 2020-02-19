@@ -20,3 +20,4 @@ function mostrar()
 	document.getElementById('promedio').value=acumulador/5;
 
 }//FIN DE LA FUNCIÓN
+// cantdadDeIntentos = prompt("cuantos numeros desea ingresar?") para `pedir primero cantidad de nuneros a ingresar

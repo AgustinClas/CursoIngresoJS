@@ -29,8 +29,16 @@ function mostrar()
 		if ((numero % 2) == 0 && numero != 0){
 			cdorPares++;
 		}
-		promedioPositivos = acPositivo / cdorPositivo;
-		promediosNegativos = acNegativo / cdorNegativo;
+		if(cdorPositivo != 0){
+			promedioPositivos = acPositivo / cdorPositivo;
+		}else {
+			promedioPositivos = 0
+		}
+		if(cdorNegativo != 0){
+			promediosNegativos = acNegativo / cdorNegativo;
+		}else{
+			promediosNegativos = 0
+		}
 		diferencia = acPositivo + acNegativo;
 		respuesta = confirm("Continuar?");
 	}

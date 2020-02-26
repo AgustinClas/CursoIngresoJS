@@ -14,7 +14,7 @@ function NumerosPares ()
     var numerosPares;
     numero = document.getElementById("numero").value;
     numero = parseInt(numero);
-    if(0>numero){
+    if(0>numero || isNaN(numero)){
         alert("Ingrese un numero positivo");
     }
 
@@ -28,7 +28,7 @@ function NumerosImpares ()
     numero = document.getElementById("numero").value;
     numero = parseInt(numero);
 
-    if(0>numero){
+    if(0>numero  || isNaN(numero)){
         alert("Ingrese un numero positivo");
     }
 

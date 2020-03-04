@@ -48,7 +48,7 @@ function mostrar()
         respuesta = confirm("Continuar?");
     }
     document.write("Temperatutas pares: " + temperaturaPares + "<br>");
-    document.write("marca del producto más pesado" + marcaPesado + "<br>");
+    document.write("marca del producto más pesado: " + marcaPesado + "<br>");
     document.write("temperatura menor a 0 grados "+ contadorTemperatura + "<br>");
     document.write("Peso promedio " + promedioPeso + "<br>");
     document.write("Peso maximo " + pesoMax + "<br>");
